@@ -1,0 +1,975 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url(../assets/text/Metropolis-Light.otf);
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Metropolis;
+}
+
+:root {
+  --primary-btn-color: #ed017f;
+}
+
+.container {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.row > * {
+  padding: 0 15px;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Header Section */
+
+header {
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.navbar-brand > a {
+  max-width: 109px;
+  max-height: 53px;
+}
+
+.navbar-brand > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+nav,
+.nav-right,
+.nav-right > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-right {
+  flex-grow: 1;
+}
+
+.nav-right > ul {
+  gap: 41.6px;
+  margin: 0 auto;
+}
+
+.nav-right > ul > li > a {
+  font-size: 12px;
+  color: black;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
+.magnifier > a {
+  max-width: 24px;
+}
+
+.magnifier > a > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav-btn > a {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: var(--primary-btn-color);
+  color: white;
+  font-size: 12px;
+}
+
+.sm-nav-right {
+  display: none;
+}
+
+.active {
+  display: flex !important;
+}
+
+/* Banner Section*/
+
+.banner-section {
+  padding-block: 220px 0px;
+}
+
+.banner-section > div > div {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col6 {
+  width: 50%;
+}
+
+h1 {
+  max-width: 453px;
+  font-size: 61px;
+  font-weight: bolder;
+}
+
+.banner-content .description {
+  max-width: 380px;
+  color: #676767;
+  margin-block: 23px 38px;
+}
+
+.banner-btn {
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.apply-online {
+  padding: 13px 22px;
+  border-radius: 4px;
+  background-color: var(--primary-btn-color);
+  color: white;
+  font-size: 12px;
+}
+
+.loan-calculator {
+  padding: 13px 22px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-btn-color);
+  color: var(--primary-btn-color);
+  font-size: 12px;
+}
+
+.icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.call > p {
+  font-size: 17px;
+  font-weight: 400px;
+}
+
+.divider > span {
+  display: inline-block;
+  width: 2px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.call > img,
+.facebook,
+.youtube,
+.instagram {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.call > img,
+.facebook,
+.youtube,
+.instagram {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sm-banner-img {
+  display: none;
+}
+
+.banner-background {
+  position: absolute;
+  z-index: -11;
+  bottom: 41px;
+  left: 0;
+  height: 150%;
+  width: 110%;
+  background-color: #ffeaf5;
+}
+
+.banner-img {
+  max-width: 710px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner-img > img {
+  width: 120%;
+  object-fit: contain;
+}
+
+.car,
+.house {
+  padding: 24.5px 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+  background-color: white;
+  border-radius: 55px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-wrap: nowrap;
+}
+
+.car {
+  position: absolute;
+  top: -80px;
+  right: 460px;
+}
+
+.house {
+  position: absolute;
+  top: 19px;
+  right: -7px;
+}
+
+.car > img,
+.house > img {
+  max-width: 24px;
+  object-fit: contain;
+}
+
+/* customer experience section */
+
+.customer-experience-section {
+  margin-block: 90px 72.5px;
+}
+
+.customer-experience-section .subtitle {
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.customer-experience-section .description {
+  max-width: 660px;
+  text-align: center;
+  margin: 30px auto 76px;
+  color: #676767;
+}
+
+.customer-experience-section > div > div {
+  row-gap: 35px;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.card > img {
+  max-width: 37px;
+  object-fit: contain;
+}
+
+.customer-experience-section .card > h3 {
+  font-size: 18px;
+  margin-block: 10px;
+}
+
+.customer-experience-section .card > p {
+  font-size: 14px;
+  max-width: 160px;
+  color: #676767;
+}
+
+/* Business partners section */
+
+.business-partners-section {
+  padding-block: 70px;
+  background-color: rgba(252, 224, 239, 0.2);
+}
+
+.business-partners-section > div > p {
+  text-align: center;
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper {
+  width: 100%;
+  height: 265px !important;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-card {
+  max-width: 185px;
+  max-height: 110px;
+}
+
+.partners-card > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.swiper {
+  margin: 0 auto;
+}
+
+/* IPDC at a glance section */
+
+.IPDC-section > div > div {
+  justify-content: center;
+  align-items: center;
+}
+
+.IPDC-section .col6 {
+  width: 50%;
+}
+
+.IPDC-img {
+  max-width: 618px;
+}
+
+.IPDC-img > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.IPDC-content {
+  max-width: 460px;
+}
+
+.IPDC-content .subtitle {
+  font-size: 36px;
+}
+
+.IPDC-content > .description {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5rem;
+  margin-block: 10px 40px;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ed017f;
+  font-size: 14px;
+}
+
+/* our services section */
+
+.our-services-section {
+  padding-block: 106px 130px;
+  background-color: rgb(254, 249, 252);
+}
+
+.our-services-section .subtitle {
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.our-services-section .description {
+  max-width: 836px;
+  text-align: center;
+  margin: 20px auto 64px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.col4 {
+  width: 25%;
+}
+
+.img-card {
+  max-height: 457px;
+}
+
+.img-card > .our-services-img {
+  max-width: 254px;
+}
+
+.img-card > .our-services-img > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.our-services-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 22px;
+}
+
+.our-services-content > p {
+  max-width: 195px;
+  font-size: 21px;
+  font-weight: 400px;
+  line-height: 2rem;
+}
+
+.our-services-content > img {
+  border-radius: 50%;
+  background-color: #fce0ef;
+}
+
+/* our best results section */
+
+.best-results-section {
+  margin-block: 90px 72.5px;
+}
+
+.best-results-section .subtitle {
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.best-results-section .description {
+  max-width: 660px;
+  text-align: center;
+  margin: 30px auto 76px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.col9 {
+  width: 25%;
+  margin-bottom: 35px;
+}
+
+.best-results-section .card > h3 {
+  font-size: 25px;
+  margin-block: 10px;
+}
+
+.best-results-section .card > h3:hover {
+  color: #ed017f;
+  cursor: pointer;
+}
+
+.best-results-section .card > p {
+  font-size: 14px;
+  max-width: 160px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* newsletter section */
+
+.newsletter-section {
+  padding-block: 100px 160px;
+  background-color: rgb(254, 249, 252);
+}
+
+.newsletter-section .subtitle {
+  font-size: 36px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-section .description {
+  max-width: 410px;
+  text-align: center;
+  margin: 20px auto 34px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5rem;
+}
+
+.search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+}
+
+input[type="email"] {
+  min-width: 290px;
+  padding: 12px 15px;
+  border: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+input[type="email"] ::placeholder {
+  color: rgba(204, 204, 204, 0.2);
+}
+
+.subscribe {
+  padding: 13px 22px;
+  border-radius: 4px;
+  background-color: var(--primary-btn-color);
+  color: white;
+  font-size: 12px;
+}
+
+/* footer section */
+
+footer {
+  padding: 60px 0 80px;
+}
+
+footer > div > div {
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.about-the-company {
+  max-width: 180px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 14px;
+  text-wrap: nowrap;
+  color: black !important;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-block: 20px 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links {
+  max-width: 140px;
+  text-wrap: nowrap;
+}
+
+.footer-links > ul > li > a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 12px;
+}
+
+footer > div > div > .call {
+  display: flex;
+  align-items: start;
+  font-size: 12px;
+  gap: 11px;
+}
+
+footer > div > div > .call > p {
+  padding-top: 4px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-right {
+    padding-block: 20px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff8fb;
+    animation: upsidedown 0.7s forwards 1 linear;
+  }
+
+  @keyframes upsidedown {
+    from {
+      transform: translateY(-200px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .nav-right > ul {
+    flex-direction: column;
+    margin-bottom: 41.6px;
+  }
+
+  .magnifier {
+    display: none;
+  }
+
+  .sm-nav-right{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sm-magnifier{
+    margin-left: auto;
+    max-width: 20px;
+  }
+
+  .sm-magnifier>img{
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .ham {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+  }
+
+  .ham > span {
+    display: inline-block;
+    width: 25px;
+    height: 1.5px;
+    background-color: black;
+  }
+
+  /* banner section */
+  .banner-section {
+    padding-block: 0px;
+  }
+
+  .banner-section > div > div {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .col6 {
+    width: 100%;
+  }
+
+  .banner-content > h1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .banner-content > .description {
+    margin: 23px auto 41px;
+    text-align: center;
+  }
+
+  .banner-btn {
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  .sm-banner-img {
+    display: flex;
+    max-width: 684px;
+    margin: 0 auto;
+  }
+
+  .sm-banner-img > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* customer experience section */
+
+  .col3 {
+    width: 33.3%;
+  }
+
+  .customer-experience-section .card > h3 {
+    font-size: 14px;
+  }
+
+  .customer-experience-section .card > p {
+    font-size: 12px;
+  }
+
+  /* IPDC  at a glance section */
+
+  .IPDC-section > div > div {
+    gap: 50px;
+  }
+
+  .IPDC-section .col6 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .IPDC-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .read-more {
+    justify-content: center;
+  }
+
+  /* our services section */
+
+  .our-services-content > p {
+    font-size: 16px;
+  }
+
+  /* our best results section */
+
+  .col9 {
+    width: 33.3%;
+  }
+
+  .our-services-section .card > h3 {
+    font-size: 14px;
+  }
+
+  .our-services-section .card > p {
+    font-size: 12px;
+  }
+
+  /* footer section */
+
+  footer > div > div {
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .navbar-brand > a > img {
+    width: 75%;
+  }
+
+  .ham {
+    gap: 7px;
+  }
+
+  .ham > span {
+    width: 20px;
+    height: 1px;
+  }
+
+  .banner-content > h1 {
+    font-size: 46px;
+  }
+
+  /* customer experience section */
+
+  .customer-experience-section .subtitle {
+    font-size: 30px;
+  }
+
+  .col3 {
+    width: 50%;
+  }
+
+  /* IPDC at a glance section */
+
+  .IPDC-section .subtitle {
+    font-size: 30px;
+  }
+
+  /* our services section */
+
+  .our-services-section .subtitle {
+    font-size: 30px;
+  }
+
+  .our-services-section .col4 {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  /* our best results section */
+
+  .best-results-section .subtitle {
+    font-size: 30px;
+  }
+
+  .our-services-content > p {
+    font-size: 14px;
+  }
+
+  .col9 {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  /* newsletter section */
+
+  .newsletter-section {
+    padding-block: 50px;
+  }
+
+  .newsletter-section .subtitle {
+    font-size: 30px;
+  }
+
+  .search-field {
+    flex-direction: column;
+  }
+
+  /* footer section */
+
+  footer > div > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .heading {
+    font-size: 12px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+  }
+
+  .footer-links > ul > li > a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .nav-right {
+    top: 46px;
+  }
+
+  .banner-section > div > div {
+    gap: 35px;
+  }
+
+  .banner-content > h1 {
+    font-size: 26px;
+  }
+
+  .banner-content .description {
+    font-size: 12px;
+  }
+
+  .banner-btn {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .apply-online {
+    font-size: 8px;
+  }
+
+  .loan-calculator {
+    font-size: 8px;
+  }
+
+  .call > p {
+    font-size: 12px;
+  }
+
+  /* customer experience section */
+
+  .customer-experience-section .subtitle {
+    font-size: 20px;
+  }
+
+  .customer-experience-section .description {
+    font-size: 12px;
+  }
+
+  .business-partners-section > div > p {
+    font-size: 16px;
+  }
+
+  .customer-experience-section .card > p {
+    font-size: 12px;
+  }
+
+  /* IPDC at a glance section */
+
+  .IPDC-section .subtitle {
+    font-size: 20px;
+  }
+
+  .IPDC-section .description {
+    font-size: 12px;
+  }
+
+  /* our services section */
+
+  .our-services-section .subtitle {
+    font-size: 20px;
+  }
+
+  .our-services-section .description {
+    font-size: 12px;
+  }
+
+  /* our best results section */
+
+  .our-services-section {
+    padding-block: 106px 65px;
+  }
+
+  .best-results-section .subtitle {
+    font-size: 20px;
+  }
+
+  .best-results-section .description {
+    font-size: 12px;
+  }
+
+  .best-results-section .card > h3 {
+    font-size: 18px;
+  }
+
+  /* newsletter section */
+
+  .newsletter-section .subtitle {
+    font-size: 20px;
+  }
+
+  .newsletter-section .description {
+    font-size: 12px;
+  }
+}

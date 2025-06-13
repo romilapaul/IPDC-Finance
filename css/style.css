@@ -860,6 +860,10 @@ footer > div > div > .call > p {
     gap: 20px;
   }
 
+  .about-the-company{
+    max-width: 400px;
+  }
+
   .heading {
     font-size: 12px;
   }
